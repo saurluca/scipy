@@ -1,0 +1,32 @@
+digraph {
+	graph [size="12,12"]
+	node [align=left fontname=monospace fontsize=10 height=0.2 ranksep=0.1 shape=box style=filled]
+	140009387110272 [label="
+ (1, 1)" fillcolor=darkolivegreen1]
+	140009382675456 -> 140009387307440 [dir=none]
+	140009387307440 [label="mat1
+ (1, 6)" fillcolor=orange]
+	140009382675456 [label="AddmmBackward0
+--------------------------------
+alpha           :              1
+beta            :              1
+mat1            : [saved tensor]
+mat1_sym_sizes  :         (1, 6)
+mat1_sym_strides:             ()
+mat2            :           None
+mat2_sym_sizes  :         (6, 1)
+mat2_sym_strides:         (1, 6)"]
+	140009382678624 -> 140009382675456
+	140009381002240 [label="linear_relu_stack.0.bias
+ (1)" fillcolor=lightblue]
+	140009381002240 -> 140009382678624
+	140009382678624 [label=AccumulateGrad]
+	140009382681120 -> 140009382675456
+	140009382681120 [label=TBackward0]
+	140009382675168 -> 140009382681120
+	140009381002000 [label="linear_relu_stack.0.weight
+ (1, 6)" fillcolor=lightblue]
+	140009381002000 -> 140009382675168
+	140009382675168 [label=AccumulateGrad]
+	140009382675456 -> 140009387110272
+}
